@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
         {!pathname.includes("cart") && (
           <button
             onClick={() => dispatch(addToCart(product))}
-            className='bg-gradient-to-r from-[#264373] to-[#334e7b] rounded-full py-1 px-2 flex-1 text-white text-bold'
+            className='bg-gradient-to-r from-[#264373] to-[#334e7b] hover:shadow-[#6980a7] shadow-lg rounded-full py-1 px-2 flex-1 text-white text-bold'
           >
             Add to cart
           </button>

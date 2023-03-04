@@ -35,10 +35,10 @@ const routes = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
     children: [
-      // {
-      //   path: "/dashboard",
-      //   element: <ProductList />,
-      // },
+      {
+        path: "/dashboard",
+        element: <ProductList />,
+      },
       {
         path: "add-product",
         element: <AddProduct />,

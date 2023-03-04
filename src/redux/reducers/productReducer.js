@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import {
   ADD_PRODUCT,
   ADD_TO_CART,
@@ -27,6 +28,7 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         products: [...state.products, action.payload],
+        
       };
     case REMOVE_PRODUCT:
       return {
@@ -42,10 +44,11 @@ const productReducer = (state = initialState, action) => {
         );
 
         selectedProduct.quantity = selectedProduct.quantity + 1;
-
+toast.success("Product add to your cart")
         return {
           ...state,
           cart: [...newCart, selectedProduct],
+          
         };
       }
       return {
@@ -58,7 +61,7 @@ const productReducer = (state = initialState, action) => {
           (product) => product._id !== selectedProduct._id
         );
         selectedProduct.quantity = selectedProduct.quantity - 1;
-
+toast.success("Product Remove to your cart")
         return {
           ...state,
           cart: [...newCart, selectedProduct],

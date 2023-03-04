@@ -1,8 +1,8 @@
 import { addProduct } from "../../actions/productAction";
-
+import { toast } from "react-hot-toast";
 const addProductData = (product) => {
   return async (dispatch, getState) => {
-    const res = await fetch("http://localhost:5000/product", {
+    const res = await fetch("https://server-nine-lovat.vercel.app/product", {
       method: "POST",
       body: JSON.stringify(product),
       headers: {
@@ -18,6 +18,7 @@ const addProductData = (product) => {
           ...product,
         })
       );
+      toast.success("Product added successfully")
     }
   };
 };

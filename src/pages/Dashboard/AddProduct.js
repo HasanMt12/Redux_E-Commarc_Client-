@@ -22,6 +22,7 @@ const AddProduct = () => {
       spec: [],
     };
     console.log(product);
+    
     dispatch(addProductData(product));
   };
 
@@ -49,8 +50,8 @@ const AddProduct = () => {
             Brand
           </label>
           <select name='brand' id='brand' {...register("brand")}>
-            <option value='amd'>REP Fitness</option>
-            <option value='intel'> Rogue Fitness</option>
+            <option value='nike'>REP Fitness</option>
+            <option value='adidas'> Rogue Fitness</option>
           </select>
         </div>
         <div className='flex flex-col w-full max-w-xs'>
